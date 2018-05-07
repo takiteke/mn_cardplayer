@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body onload="loadCard(<%= cards %>)">
+    <h1><%= title %></h1>
+    <p></p>
+    <div id="demo">
+      <p>{{message}}</p>
+      <input v-model="message">
+    </div>
+    <div id="shogi">
+      
+    </div>
+    <p></p>
+
+    <script src="https://unpkg.com/vue"></script><!--パスは適宜変更してください。-->
+    <script>
+    var demo = new Vue({
+        el: '#demo',
+        data: {
+            message: 'Hello Vue.js!'
+        }
+    })
+
+    function loadCard(cardsStr){
+      var cardsJson = JSON.parse(cardsStr);
+    }
+    </script>
+  </body>
+</html>
